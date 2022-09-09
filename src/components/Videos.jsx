@@ -3,10 +3,17 @@ import React from 'react';
 
 import { ChannelCard, VideoCard } from './';
 
-const Videos = ({ videos }) => {
+const Videos = ({ videos, direction, justifyContent }) => {
   // return console.log(videos);
+  if (!videos?.length) return 'Loading....';
+
   return (
-    <Stack direction="row" flexWrap="wrap" justifyContent="start" gap={2}>
+    <Stack
+      direction={direction || 'row'}
+      flexWrap="wrap"
+      justifyContent={justifyContent || 'start'}
+      gap={2}
+    >
       {videos.map((item, index) => (
         <Box key={index}>
           {item.id.videoId && <VideoCard video={item} />}
