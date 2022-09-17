@@ -21,7 +21,7 @@ const Navbar = () => (
     <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
       <img src={logo} alt="logo" height={45} />
       <Typography color="#fff" ml={1} fontSize="22px" fontWeight="semi-bold">
-        Youtubeeee
+        Youtube
       </Typography>
     </Link>
     <SearchBar />
